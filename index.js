@@ -8,6 +8,7 @@ var port = process.env.PORT || 8080;
 
 let multer = require('multer');
 let upload = multer();
+var https = require('https');
 
 var mysql = require('mysql');
 
@@ -40,11 +41,11 @@ let docter ;
 let working ;
 let docterworking ;
 app.get('/', async function (req, res) {
-    //res.send('<h1>Hello Node.js</h1>');
-    let datetimee = new Date()
-    let day = datetimee.getDay()
-    console.log(day);
-    await res.send(datetimee);
+    res.send('<h1>Hello Node.js</h1>');
+    // let datetimee = new Date()
+    // let day = datetimee.getDay()
+    // console.log(day);
+    // await res.send(datetimee);
 });
 
 app.get('/appointment', async function (req, res) {
